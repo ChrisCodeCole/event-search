@@ -1,0 +1,5 @@
+installing dependencies-
+npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request(for data validation, password endcryption,  config for global variables, gravitar for profile avatars, JWT to pass along token for validation, request to make http requests to another API-for github repo )
+npm i -D nodemon concurrently <-- dev dependencies (to constantly watch our server so we dont have to refresh it everytime we make change, concorrently to run backend express server and frontend react dev server at same time with single command) 
+
+npm run server <-- to run the app
