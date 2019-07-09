@@ -1,5 +1,7 @@
 import React from 'react';
 import { EventSearchConsumer } from '../context/context';
+import '../styles/LoginPage.css';
+
 
 
 interface IState {
@@ -23,7 +25,20 @@ export default class LoginPage extends React.Component<{}, IState> {
         {({
             playOrPause 
         }) => (
-            <div>{playOrPause}</div>
+            <div className="LoginPage-Container">
+                <nav className="LoginPage-NavContainer">
+                    <div className="LoginPage-NavLeftContainer">
+                        <h1 className="LoginPage-NavAppTitle LoginPage-NavText">EventSearch</h1>
+                        <input className="LoginPage-SearchBar" type="text" placeholder="Search.." />
+                    </div>
+                    <div className="LoginPage-NavRightContainer">
+                        <h2 className="LoginPage-NavLogin LoginPage-NavText">Login</h2>
+                        <h2 className="LoginPage-NavSignUp LoginPage-NavText">Sign Up</h2>
+                    </div>
+                </nav>
+
+                {/* {playOrPause} */}
+            </div>
         )}
         </EventSearchConsumer>
       )
