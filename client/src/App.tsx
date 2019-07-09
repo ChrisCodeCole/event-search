@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import { EventSearchProvider } from './context/context';
-import LoginPage from './components/LoginPage';
+import AppRouter from './router/Routes';
+
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <EventSearchProvider>
-        <LoginPage />
+        <AppRouter />
       </EventSearchProvider>
     </div>
   );
