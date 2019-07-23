@@ -1,0 +1,9 @@
+======================
+MAIN GOAL: Improve this list...
+======================
+
+1. Design Search Bar CSS
+2. Create User from Login Page
+3. Validate User with tokens
+4. Design Map Page
+5. Look at connecting API..

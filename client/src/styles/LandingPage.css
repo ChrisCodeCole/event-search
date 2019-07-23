@@ -1,0 +1,65 @@
+.LandingPage-Container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.LandingPage-NavContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    height: 5rem;
+}
+
+.LandingPage-NavLeftContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LandingPage-NavAppTitle{
+    margin-left: 5rem;
+    margin-right: 2.5rem;
+    font-size: 1.6rem;
+}
+.LandingPage-SearchContainer{
+}
+
+.LandingPage-SearchBar{
+    border-radius: 0.3rem;
+    /* background-color: rgb(125,125,125); */
+    border-right: none;
+    width: 17rem;
+    height: 1.5rem;
+}
+
+.LandingPage-SearchBarButton{
+
+}
+
+.LandingPage-NavRightContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LandingPage-NavLogin{
+    margin-right: 2.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.LandingPage-NavSignUp{
+    margin-right: 5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.LandingPage-NavText{
+    display: inline-block;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

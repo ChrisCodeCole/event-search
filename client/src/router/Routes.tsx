@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import LoginPage from '../components/LoginPage';
 import MapPage from '../components/MapPage';
+import LandingPage from "../components/LandingPage";
+import LoginPage from '../components/LoginPage';
+import SignUpPage from '../components/SignUpPage';
 
 
 function AppRouter() {
@@ -18,8 +20,10 @@ function AppRouter() {
                         </li>
                     </ul>
                 </nav> */}
-                <Route path="/" exact component={LoginPage} />
+                <Route path="/" exact component={LandingPage} />
                 <Route path="/maps" component={MapPage} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/signup" component={SignUpPage} />
             {/* </div> */}
         </Router>
     );

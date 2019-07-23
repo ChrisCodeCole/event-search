@@ -1,7 +1,13 @@
 import React from 'react';
-import { EventSearchConsumer } from '../context/context';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 import '../styles/LoginPage.css';
-
+import logo from '../assets/event-search-blue.png';
 
 
 interface IState {
@@ -16,31 +22,60 @@ export default class LoginPage extends React.Component<{}, IState> {
         };
     }
   
-    componentDidMount = () => {
-        console.log(this.props);
-    }
     public render() {
-      return (
-        <EventSearchConsumer>
-        {({
-            playOrPause 
-        }) => (
-            <div className="LoginPage-Container">
-                <nav className="LoginPage-NavContainer">
-                    <div className="LoginPage-NavLeftContainer">
-                        <h1 className="LoginPage-NavAppTitle LoginPage-NavText">EventSearch</h1>
-                        <input className="LoginPage-SearchBar" type="text" placeholder="Search.." />
-                    </div>
-                    <div className="LoginPage-NavRightContainer">
-                        <h2 className="LoginPage-NavLogin LoginPage-NavText">Login</h2>
-                        <h2 className="LoginPage-NavSignUp LoginPage-NavText">Sign Up</h2>
-                    </div>
-                </nav>
-
-                {/* {playOrPause} */}
-            </div>
-        )}
-        </EventSearchConsumer>
-      )
+      return <Container maxWidth="xs">
+      <div className="LoginPage-container">
+        {/* <Typography variant="h5">
+          EventSearch
+        </Typography> */}
+        <img className="LoginPage-logo" src={logo} alt="Logo" />
+        <form  noValidate>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            autoFocus
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            autoComplete="current-password"
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+          >
+            Sign In
+          </Button>
+          <Grid container>
+            <Grid item xs>
+              <Link href="#" variant="body2">
+                Forgot password?
+              </Link>
+            </Grid>
+            <Grid item>
+              <Link href="#" variant="body2">
+                {"Don't have an account? Sign Up"}
+              </Link>
+            </Grid>
+          </Grid>
+        </form>
+      </div>
+      <Box mt={5}>
+      </Box>
+    </Container>
     }
 }
